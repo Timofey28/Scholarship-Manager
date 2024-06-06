@@ -1,0 +1,78 @@
+
+students {
+	id serial
+	surname text
+	name text
+	patronymic text
+	pasport_serie char(4)
+	pasport_number char(6)
+	adress text
+	institute_number int
+	group_id int *> groups.id
+	course int
+	direction_id int *> directions.id
+	no_scholarship_reason text
+	is_trade_union_member boolean
+	support_category_id int *> support_categories.id
+}
+
+orders {
+	id serial
+	number int
+	date date
+	scope varchar(9)
+	institute_number int
+	group_id int *> groups.id
+	student_id int *> students.id
+	enrollment_amount int
+}
+
+penalties {
+	student_id int *> students.id
+	name text
+	type varchar(7)
+	amount numeric
+}
+
+directions {
+	id serial
+	code varchar(6)
+	name text
+}
+
+groups {
+	id serial
+	name varchar(15)
+}
+
+employees {
+	id serial
+	login text
+	password text
+}
+
+payment_methods {
+	student_id int *> students.id
+	type varchar(15)
+	bank text
+	phone_number varchar(11)
+	payment_account varchar(20)
+}
+
+support_categories {
+	id serial
+	name text
+	semester_payment int
+}
+
+subjects {
+	id serial
+	name text
+}
+
+grades {
+	student_id int *> students.id
+	subject_id int *> subjects.id
+	grade int
+}
+
