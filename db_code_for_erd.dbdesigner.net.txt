@@ -30,8 +30,7 @@ orders {
 penalties {
 	student_id int *> students.id
 	name text
-	type varchar(7)
-	amount numeric
+	amount int
 }
 
 directions {

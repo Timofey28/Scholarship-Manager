@@ -31,8 +31,8 @@ class App:
         self.auth = Auth(self.page, self.button_auth_submit)
         self.menu = Menu(self.page, self.db, self.button_menu_logout)
 
-        # self.auth.load_page()
-        self.menu.load_page(1)  # debug mode
+        self.auth.load_page()
+        # self.menu.load_page(1)  # debug mode
 
 
     def button_auth_submit(self, e: ControlEvent):
