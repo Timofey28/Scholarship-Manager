@@ -78,7 +78,7 @@ class ScholarshipCalculator:
                     subtitle += f"\nШтраф: {self.__prettify_money(int(penalty['amount']))} ({penalty['name']})"
                 for order in scholarship_info['orders']:
                     subtitle += f"\nНадбавка: {self.__prettify_money(int(order['amount']))} (приказ №{order['number']} от {order['date']:%d.%m.%Y})"
-                if scholarship_info['support']['amount']:
+                if scholarship_info['support'] and scholarship_info['support']['amount']:
                     subtitle += f"\nМатериальная помощь: {self.__prettify_money(int(scholarship_info['support']['amount']))} ({scholarship_info['support']['category']})"
                 subtitle += f"\nИтоговая стипендия: {self.__prettify_money(scholarship_info['final_scholarship'])}"
                 trailing = ft.Text(self.__prettify_money(scholarship_info['final_scholarship']), size=25)

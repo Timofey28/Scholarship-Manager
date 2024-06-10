@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 import flet as ft
-from flet import ControlEvent
 
 from database import Database
 

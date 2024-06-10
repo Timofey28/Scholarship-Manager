@@ -15,6 +15,7 @@ data.py
 *.txt
 *.docx*
 *.json
+dump.sql
 
 # Do not ignore!
 !db_code_for_erd.dbdesigner.net.txt
