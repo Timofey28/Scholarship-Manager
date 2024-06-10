@@ -224,7 +224,8 @@ class Menu:
             ft.Row([header], alignment=ft.MainAxisAlignment.CENTER),
             ft.Container(content=button_create_order, margin=ft.margin.only(left=200, top=20)),
             ft.Container(content=orders_phrase, margin=ft.margin.only(left=200, top=15)),
-            ft.Container(content=order_list, width=800, margin=ft.margin.only(left=200, top=15)),
+            # ft.Container(content=order_list, width=800, margin=ft.margin.only(left=200, top=15)),
+            order_list,
         )
 
 
