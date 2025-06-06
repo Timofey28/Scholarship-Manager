@@ -1,6 +1,5 @@
 import flet as ft
 from flet_core.control_event import ControlEvent
-import logging
 
 from app.custom_controls import *
 
